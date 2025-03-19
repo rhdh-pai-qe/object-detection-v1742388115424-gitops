@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: object-detection-v1742388115424-gitops
+  description: This is GitOps manifest for object-detection-v1742388115424   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=object-detection-v1742388115424
+    janus-idp.io/tekton: object-detection-v1742388115424 
+    backstage.io/kubernetes-id: object-detection-v1742388115424 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:object-detection-v1742388115424  

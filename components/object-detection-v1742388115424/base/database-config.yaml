@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: object-detection-v1742388115424-database-config
+data:
+  VECTORDB_HOST: "object-detection-v1742388115424-database"
+  VECTORDB_PORT: ""

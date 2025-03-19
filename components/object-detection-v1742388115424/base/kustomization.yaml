@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  argocd/app-name: object-detection-v1742388115424
+  janus-idp.io/tekton: object-detection-v1742388115424
+  backstage.io/kubernetes-id: object-detection-v1742388115424
+  backstage.io/kubernetes-namespace: rhdh-app
+  app.kubernetes.io/part-of: object-detection-v1742388115424
+resources:
+  - initialize-namespace.yaml
+  - deployment-model-server.yaml
+  - service-model-server.yaml
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
+  - model-config.yaml
+  - rhoai/
